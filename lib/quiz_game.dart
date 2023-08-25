@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
-import 'package:quiz/greeting.dart';
+import 'package:quiz/greeting_screen.dart';
+import 'package:quiz/main_screen.dart';
 
 enum QuizComplexity { hard, normal, easy }
 
@@ -12,7 +13,8 @@ class QuizGame extends FlameGame {
 
   @override
   FutureOr<void> onLoad() {
-    world.add(GreetingScreen());
+    //world.add(GreetingScreen());
+    world.add(QuizGameScreen());
     add(world);
     cam = CameraComponent(world: world)
       ..viewfinder.visibleGameSize = Vector2(size.x, size.y)
