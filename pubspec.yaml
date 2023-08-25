@@ -1,5 +1,5 @@
 name: quiz
-description: A new Flutter project.
+description: quiz game
 publish_to: 'none'
 version: 0.1.0
 
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flame: ^1.8.2
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,3 @@
 # quiz
 
-A new Flutter project.
+quiz game
