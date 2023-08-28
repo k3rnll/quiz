@@ -25,11 +25,12 @@ class QuizGameScreen extends PositionComponent with HasGameRef<QuizGame> {
     super.position = Vector2(game.size.x / 2, game.size.y / 2);
     super.anchor = Anchor.center;
     questionBox = TextBoxComponent(
-        text: question,
-        //size: Vector2(size.x / 4 * 3, 100),
-        boxConfig: TextBoxConfig(maxWidth: size.x / 8 * 7, growingBox: true),
-        position: Vector2(size.x / 2, 100),
-        anchor: Anchor.topCenter);
+      text: question,
+      //size: Vector2(size.x / 4 * 3, 100),
+      boxConfig: TextBoxConfig(maxWidth: size.x / 8 * 7, growingBox: true),
+      position: Vector2(size.x / 2, 100),
+      anchor: Anchor.topCenter,
+    );
 
     answerA = AnswerButton(
         answerText: "A", position: Vector2(size.x / 4, size.y / 4 * 3));
@@ -90,7 +91,7 @@ class QuizGameScreen extends PositionComponent with HasGameRef<QuizGame> {
         answerC.answerText = game.question!.answers[randomIndexes[2]];
         answerD.answerText = game.question!.answers[randomIndexes[3]];
       } else {
-        questionBox.text = "";
+        questionBox.text = "Thank you!\nGood Game!";
         answerA.answerText = "";
         answerB.answerText = "";
         answerC.answerText = "";
